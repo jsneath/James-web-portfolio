@@ -18,45 +18,85 @@ h6 {
   margin: 0;
 }
 
+h2, p {
+color: rgb(2, 2, 74);
+}
+
 h1 {
   font-size: 50px;
+  color: rgb(2, 2, 74);
 }
 
-p {
-  margin: 0;
+a {
+  color: rgb(2, 2, 74);
 }
 
-header {
+
+header nav {
+ 
   display: flex;
   justify-content: space-between;
-  margin-right: 50PX;
-  margin-left: 50px;
   align-items: flex-end;
+  padding-bottom: 10px;
+  background-color: rgb(69, 69, 69);
+  margin-left: -10px;
 }
+
+header nav ul {
+  margin-right: 100px;
+}
+
+header nav a {
+  color: aqua; 
+}
+
+.title-name{
+  background-color: aqua;
+  margin-left: 10px;
+  /* padding-bottom: 5px; */
+  padding-right: 10px;
+  padding-left: 100px;
+}
+
+
 
 .hero-banner {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   /* height: 200px; */
-  margin-right: 50px;
+  margin-right: 0px;
   margin-top: -80px;
+  background: linear-gradient(rgba(0, 213, 255, 0.453), rgba(0, 170, 255, 0.5)), url("../images/02-hero-bg.jpg");
+  /* background-image: url("../images/02-hero-bg.jpg"); */
+  background-size: cover;   /* This will cover the entire viewport of the .hero-banner */
+  background-repeat: no-repeat;   /* This prevents the image from repeating */
+  background-position: center center;   
+  min-height: 300px;
+  margin-top: 0px;
 
 }
 
 .hero-banner h2 {
   font-size: 50px;
+  margin-right: 100px;
+  color: (2, 2, 74);
+  background-color: aqua;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* My Photo ------------------------------------- */
 
 .my-photo img {
-  max-width: 50%;    /* Ensures images don't stretch beyond their container */
+  max-width: 70%;    /* Ensures images don't stretch beyond their container */
   height: auto;       /* Maintains the aspect ratio */
   border-radius: 40px; /* Adds rounded corners */
   /* display: flex; */
-  margin-left: 50px;
-  margin-top: 100px;
+  margin-left: 80px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border: 4px solid aqua;
 }
 
 
@@ -115,7 +155,8 @@ margin-right: 5px;
 }
 
 .page-section h2 {
-  width: 500px;;    /* Push everything to the right of the h2 */
+  width: 500px;    /* Push everything to the right of the h2 */
+  font-size: 50px;
 }
 
 .portfolio-links {
@@ -123,6 +164,81 @@ margin-right: 5px;
   margin: 0 100px;  
 }
 
+.about-me {
+  display: flex;
+  align-items: start;  /* If you want items to align to the top */
+}
+
+
+
+.about-me p {
+  flex-grow: 1;
+  max-width: 100%; /* 1000px - 500px (h2) - 100px (margin) = 400px */
+ 
+}
+
+
+.about-me h2 {
+  width: 500px;    /* Push everything to the right of the h2 */
+  font-size: 50px;
+}
+
+.contact-me {
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.contact-me h2 {
+  font-size: 50px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.contact-items {
+  display:flex;
+  justify-content:center;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 40px;
+  flex-grow: 1;
+  max-width: 100%; /* 1000px - 500px (h2) - 100px (margin) = 400px */
+  /* min-width: 600px; */
+  align-items: start;
+
+}
+
+
+.page-section h2, .about-me h2, .contact-me h2 {
+  flex: 1;  /* Allow it to grow and consume space, but limit it */
+  font-size: 50px;  /* Keeping the font size consistent */
+  padding-right: 20px;  /* Space between the text and the border */
+  margin-right: 20px;  /* Space between the border and the content on its right */
+  height: 80px;  /* Set a fixed height. Adjust based on what looks good. */
+  line-height: 80px;  /* Ensure vertical centering of text */
+  margin-left: 100px;
+}
+
+
+
+.about-me p, .portfolio-links{
+  flex: 2;  /* This will make it consume more space than the h2 */
+  margin-left: 0;  /* Removing the previous large margin */
+  margin-right: 100px;
+  padding-left: 40px;
+  border-left: 2px solid rgb(2, 2, 74);
+  flex-wrap: wrap;  /* Allow content to wrap if it exceeds the space */
+  
+}
+
+.contact-items {
+  flex: 2;  /* This will make it consume more space than the h2 */
+  margin-left: 0;  /* Removing the previous large margin */
+  margin-right: 100px;
+  padding-left: 40px;
+ 
+  flex-wrap: wrap;  /* Allow content to wrap if it exceeds the space */
+}
 
 
 
@@ -131,15 +247,17 @@ margin-right: 5px;
   bottom: 10px;         /* Position it 10px from the bottom */
   left: 10px;           /* Position it 10px from the left */
   transform: none !important;  /* Override any previous transform and ensure no centering */
-  color: #ffffff;       /* White text */
+  color: rgb(2, 2, 74);       /* White text */
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5); /* Background for better readability */
+  background-color:aqua; /* Background for better readability */
   padding: 5px;         /* Some padding */
   border-radius: 3px;   /* Rounded corners */
 }
 
 
-/* .page-section {
-  margin-right: 100px;
-  margin-left: 400px;
-} */
+
+
+
+@media (min-width: 768px) {
+  /* styles for devices with screens wider than 768px */
+}
