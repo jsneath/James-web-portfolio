@@ -31,9 +31,9 @@ a {
   color: rgb(2, 2, 74);
 }
 
+/* nav menu------------------------------------ */
 
 header nav {
- 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -53,28 +53,26 @@ header nav a {
 .title-name{
   background-color: aqua;
   margin-left: 10px;
-  /* padding-bottom: 5px; */
+ 
   padding-right: 10px;
   padding-left: 100px;
 }
 
+/* Hero Banner ---------------------------------- */
 
 
 .hero-banner {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  /* height: 200px; */
   margin-right: 0px;
   margin-top: -80px;
   background: linear-gradient(rgba(0, 213, 255, 0.453), rgba(0, 170, 255, 0.5)), url("../images/02-hero-bg.jpg");
-  /* background-image: url("../images/02-hero-bg.jpg"); */
-  background-size: cover;   /* This will cover the entire viewport of the .hero-banner */
-  background-repeat: no-repeat;   /* This prevents the image from repeating */
+  background-size: cover; 
+  background-repeat: no-repeat;   
   background-position: center center;   
   min-height: 300px;
   margin-top: 0px;
-
 }
 
 .hero-banner h2 {
@@ -86,27 +84,49 @@ header nav a {
   padding-right: 10px;
 }
 
-/* My Photo ------------------------------------- */
-
 .my-photo img {
-  max-width: 70%;    /* Ensures images don't stretch beyond their container */
-  height: auto;       /* Maintains the aspect ratio */
-  border-radius: 40px; /* Adds rounded corners */
-  /* display: flex; */
+  max-width: 70%;   
+  height: auto;       
+  border-radius: 40px; 
   margin-left: 80px;
   margin-top: 10px;
   padding-bottom: 5px;
   border: 4px solid aqua;
 }
 
+/* about me --------------------------------------- */
 
-/* ---------Grid with photos to websites */
+.about-me {
+  display: flex;
+  align-items: start;
+}
 
+.about-me p {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.about-me h2 {
+  width: 500px;
+  font-size: 50px;
+}
+
+/* ---------Grid with photos to websites----------------- */
+
+.page-section {
+  display: flex;
+  align-items: start;
+}
+
+.page-section h2 {
+  width: 500px;
+  font-size: 50px;
+}
 
 .big-image {
   width: 100%;
   position: relative;
-  display: block; /* This ensures that the link acts like a container to its contents */
+  display: block;
   height:auto;
 }
 
@@ -115,7 +135,6 @@ header nav a {
     height: 400px;
     object-fit: cover;
     border: 4px solid aqua;
-    
 }
 
 .image-2, .image-3, .image-4, .image-5 {
@@ -146,42 +165,26 @@ margin-right: 5px;
 
 .image-3, .image-5 {
   margin-left: 5px;
-  
-  }
-
-  .page-section {
-    display: flex;         /* Set this as a flex container */
-    align-items: start;    /* Align items to the top */
-}
-
-.page-section h2 {
-  width: 500px;    /* Push everything to the right of the h2 */
-  font-size: 50px;
 }
 
 .portfolio-links {
-  flex-grow: 1;        /* This will make it consume the remaining space */
+  flex-grow: 1;  
   margin: 0 100px;  
 }
 
-.about-me {
-  display: flex;
-  align-items: start;  /* If you want items to align to the top */
+.work-label {
+  position: absolute;
+  bottom: 10px;   
+  left: 10px;
+  transform: none !important;
+  color: rgb(2, 2, 74);
+  font-weight: bold;
+  background-color:aqua;
+  padding: 5px;
+  border-radius: 3px;
 }
 
-
-
-.about-me p {
-  flex-grow: 1;
-  max-width: 100%; /* 1000px - 500px (h2) - 100px (margin) = 400px */
- 
-}
-
-
-.about-me h2 {
-  width: 500px;    /* Push everything to the right of the h2 */
-  font-size: 50px;
-}
+/* contact me --------------------------------------- */
 
 .contact-me {
   display: flex;
@@ -202,62 +205,45 @@ margin-right: 5px;
   padding: 5px;
   margin-top: 40px;
   flex-grow: 1;
-  max-width: 100%; /* 1000px - 500px (h2) - 100px (margin) = 400px */
-  /* min-width: 600px; */
+  max-width: 100%;
+  
   align-items: start;
 
 }
 
+.contact-items {
+  flex: 2; 
+  margin-left: 0; 
+  margin-right: 100px;
+  padding-left: 40px;
+ 
+  flex-wrap: wrap;
+}
+
+/* ------------Multiple sections elements--------------------------- */
 
 .page-section h2, .about-me h2, .contact-me h2 {
-  flex: 1;  /* Allow it to grow and consume space, but limit it */
-  font-size: 50px;  /* Keeping the font size consistent */
-  padding-right: 20px;  /* Space between the text and the border */
-  margin-right: 20px;  /* Space between the border and the content on its right */
-  height: 80px;  /* Set a fixed height. Adjust based on what looks good. */
-  line-height: 80px;  /* Ensure vertical centering of text */
+  flex: 1; 
+  font-size: 50px;  
+  padding-right: 20px; 
+  margin-right: 20px; 
+  height: 80px; 
+  line-height: 80px;
   margin-left: 100px;
 }
 
 
 
 .about-me p, .portfolio-links{
-  flex: 2;  /* This will make it consume more space than the h2 */
-  margin-left: 0;  /* Removing the previous large margin */
+  flex: 2;
+  margin-left: 0;
   margin-right: 100px;
   padding-left: 40px;
   border-left: 2px solid rgb(2, 2, 74);
-  flex-wrap: wrap;  /* Allow content to wrap if it exceeds the space */
+  flex-wrap: wrap; 
   
 }
 
-.contact-items {
-  flex: 2;  /* This will make it consume more space than the h2 */
-  margin-left: 0;  /* Removing the previous large margin */
-  margin-right: 100px;
-  padding-left: 40px;
- 
-  flex-wrap: wrap;  /* Allow content to wrap if it exceeds the space */
-}
-
-
-
-.work-label {
-  position: absolute;   /* Absolutely position the label */
-  bottom: 10px;         /* Position it 10px from the bottom */
-  left: 10px;           /* Position it 10px from the left */
-  transform: none !important;  /* Override any previous transform and ensure no centering */
-  color: rgb(2, 2, 74);       /* White text */
-  font-weight: bold;
-  background-color:aqua; /* Background for better readability */
-  padding: 5px;         /* Some padding */
-  border-radius: 3px;   /* Rounded corners */
-}
-
-
-
-
-
 @media (min-width: 768px) {
-  /* styles for devices with screens wider than 768px */
+
 }
